@@ -1,0 +1,21 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. RITESH.
+
+       DATA DIVISION.
+        01 STRING1 PIC A(30).
+        01 STR1 PIC A(10) VALUE 'PRAJAPATI'.
+        01 STR2 PIC A(10) VALUE 'KUMAR AND'.
+        01 STR3 PIC A(10) VALUE 'RITESH'.
+        01 CNT PIC 99 VALUE 1.
+       PROCEDURE DIVISION.
+           STRING STR3 DELIMITED BY SIZE
+                  STR2 DELIMITED BY SPACE
+                  STR1 DELIMITED BY SIZE
+                  INTO STRING1
+                  WITH POINTER CNT
+                  ON OVERFLOW DISPLAY 'OVERFLOW!'
+           END-STRING.
+
+           DISPLAY STRING1.
+           DISPLAY CNT.
+           STOP RUN.
