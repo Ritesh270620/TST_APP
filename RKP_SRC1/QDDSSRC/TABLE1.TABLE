@@ -1,0 +1,5 @@
+CREATE OR REPLACE TABLE TABLE1(
+          ID NUMERIC(5),
+          NAME VARCHAR(20),
+          AGE NUMERIC(3)
+          )

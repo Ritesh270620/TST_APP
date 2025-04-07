@@ -1,0 +1,7 @@
+      *%LOC: SRC=*L04 OBJ=*L02                                        *
+     A          R TSTREC1
+     A            ROLLNO         9S 0
+     A            NAME          10A
+     A            COLLEGE       20A
+     A            COLLEGE1      20A
+     A          K ROLLNO

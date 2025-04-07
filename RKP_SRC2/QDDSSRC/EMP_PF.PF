@@ -1,0 +1,6 @@
+     A          R EMPREC
+     A            EMP_ID         5S 0
+     A            EMP_NAM       30A
+     A            SALARY         7S 2
+     A            EXPERIENCE     2S 0
+     A          K EMP_ID

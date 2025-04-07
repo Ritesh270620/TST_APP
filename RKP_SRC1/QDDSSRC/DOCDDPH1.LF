@@ -1,0 +1,24 @@
+     A*
+     A*   PHYSICAL SPECIFICATIONS FOR DOCDDPSQL
+     A*
+     A          R RDOCDD                    PFILE(DOCDDPSQLH
+                                                  DOCDDPSGNH)
+     A            DDFIL          2S 0
+     A            DDDOCNR        9P 0
+     A            DDOORSP        1A
+     A                                      TEXT('OORSPRONGCODE')
+     A                                      COLHDG('OORSPRONGCODE')
+     A            DDDOCTYPE      3
+     A            DDFILE       150
+     A                                      TEXT('FILENAAM')
+     A                                      COLHDG('FILENAAM')
+     A            DDPATH       150
+     A                                      TEXT('LOCATIE')
+     A                                      COLHDG('LOCATIE')
+     A            DDCRTDATE       Z         TEXT('CREATIE DATUM')
+     A            DDCRTUSER     10A         TEXT('CREATIE USER')
+     A          K DDFIL
+     A          K DDDOCNR
+     A          K DDOORSP
+     A          K DDDOCTYPE
+     A          K DDFILE

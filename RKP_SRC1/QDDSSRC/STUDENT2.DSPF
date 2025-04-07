@@ -1,0 +1,201 @@
+     A*%%TS  SD  20241202  140209  RITESHP     REL-V7R2M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CF01(01 'exit')
+     A                                      CF05(05 'refresh')
+     A                                      CF02(02 'previous')
+     A          R MARKS_SFL                 SFL
+     A*%%TS  SD  20240711  094019  RITESH1I   REL-V7R5M0  5770-WDS
+     A  80                                  SFLNXTCHG
+     A            INPOPT         1S 0B 13  2
+     A            STUTID    R        O 13 10REFFLD(STUMASTER/STUDENTID RITESH1-
+     A                                      /STMSTPRP)
+     A            FIRSTNAME R        O 13 25REFFLD(STUMASTER/FIRSTNAME RITESH1-
+     A                                      /STMSTPRP)
+     A            CLS2      R        O 13 48REFFLD(STUMASTER/CLASS RITESH1/S-
+     A                                      TMSTPRP)
+     A            TOTAL1         3  0O 13 57
+     A            TOTAL2         3  0O 13 66
+     A            TOTAL3         3  0O 13 75
+     A          R MARKS_CTL                 SFLCTL(MARKS_SFL)
+     A*%%TS  SD  20241202  140209  RITESHP     REL-V7R2M0  5770-WDS
+     A                                      OVERLAY
+     A  41                                  SFLDSP
+     A  41                                  SFLDSPCTL
+     A N41                                  SFLCLR
+     A  41                                  SFLEND(*MORE)
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0010)
+     A                                  2  2'User:'
+     A                                      COLOR(BLU)
+     A            USER          10A  O  2  8
+     A                                  2 59'Date:'
+     A                                      COLOR(BLU)
+     A                                  3  2'Job:'
+     A                                      COLOR(BLU)
+     A            JOB           10A  O  3  8
+     A                                  3 59'Time:'
+     A                                      COLOR(BLU)
+     A                                  4 30'Marks Maintenance'
+     A                                      COLOR(WHT)
+     A                                  2 65DATE
+     A                                      EDTCDE(Y)
+     A                                  3 65TIME
+     A                                  6  2'Enter Option and Press Enter'
+     A                                      COLOR(BLU)
+     A                                  8  2'2=Tabulate Student Marks    5=View-
+     A                                       Student Marks'
+     A                                      COLOR(BLU)
+     A                                 10  2'Opt'
+     A                                      COLOR(YLW)
+     A                                 10  9'Student ID'
+     A                                      COLOR(YLW)
+     A                                 10 24'Name'
+     A                                      COLOR(YLW)
+     A                                 10 47'Class'
+     A                                      COLOR(YLW)
+     A                                 10 55'Total1'
+     A                                      COLOR(YLW)
+     A                                 10 64'Total2'
+     A                                      COLOR(YLW)
+     A                                 10 73'Total3'
+     A                                      COLOR(YLW)
+     A                                 11  2'__________________________________-
+     A                                      ___________________________________-
+     A                                      _________'
+     A                                      COLOR(WHT)
+     A          R TABMRK_SFL                SFL
+     A*%%TS  SD  20240712  065931  RITESH1I   REL-V7R5M0  5770-WDS
+     A            SUBNAM1   R        O 13  2REFFLD(STUSUBJECT/SUBJECT1 RITESH1-
+     A                                      /SSMSTPRP)
+     A            TEST11         3S 0B 13 21
+     A            RESULT1        4A  O 13 31
+     A            RESULT2        4A  O 13 52
+     A            RESULT3        4A  O 13 73
+     A            TEST22         3S 0B 13 42
+     A            TEST33         3S 0B 13 63
+     A          R TABMRK_CTL                SFLCTL(TABMRK_SFL)
+     A*%%TS  SD  20240715  065949  RITESH1I   REL-V7R5M0  5770-WDS
+     A                                      OVERLAY
+     A  51                                  SFLDSP
+     A  51                                  SFLDSPCTL
+     A N51                                  SFLCLR
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0007)
+     A                                  2  2'User:'
+     A                                      COLOR(BLU)
+     A            USER          10A  O  2  8
+     A                                  2 59'Date:'
+     A                                      COLOR(BLU)
+     A                                  3  2'Job:'
+     A                                      COLOR(BLU)
+     A            JOB           10A  O  3  8
+     A                                  3 59'Time:'
+     A                                      COLOR(BLU)
+     A                                  4 30'Tabulate Marks'
+     A                                      COLOR(WHT)
+     A                                  2 65DATE
+     A                                      EDTCDE(Y)
+     A                                  3 65TIME
+     A                                  6  2'Student ID:'
+     A                                      COLOR(YLW)
+     A            STUID1         6S 0O  6 17
+     A                                  7  2'Student Name:'
+     A                                      COLOR(YLW)
+     A            NAME1         30A  O  7 17
+     A                                  8  2'Class:'
+     A                                      COLOR(YLW)
+     A            CLS1           2S 0O  8 17
+     A                                 10  2'Subject'
+     A                                      COLOR(YLW)
+     A                                 10 20'Test1'
+     A                                      COLOR(YLW)
+     A                                 10 30'Result'
+     A                                      COLOR(YLW)
+     A                                 10 41'Test2'
+     A                                      COLOR(YLW)
+     A                                 10 51'Result'
+     A                                      COLOR(YLW)
+     A                                 10 62'Test3'
+     A                                      COLOR(YLW)
+     A                                 10 72'Result'
+     A                                      COLOR(YLW)
+     A                                 11  1'__________________________________-
+     A                                      ___________________________________-
+     A                                      ___________'
+     A                                      COLOR(WHT)
+     A          R VIWMRK_SFL                SFL
+     A*%%TS  SD  20240715  054158  RITESH1I   REL-V7R5M0  5770-WDS
+     A            SUBNAM1   R        O 13  2REFFLD(STUSUBJECT/SUBJECT1 RITESH1-
+     A                                      /SSMSTPRP)
+     A            TEST11         3S 0O 13 21
+     A            RESULT1        4A  O 13 31
+     A            RESULT2        4A  O 13 52
+     A            RESULT3        4A  O 13 73
+     A            TEST22         3S 0O 13 42
+     A            TEST33         3S 0O 13 63
+     A          R VIWMRK_CTL                SFLCTL(VIWMRK_SFL)
+     A*%%TS  SD  20240714  123152  RITESH1I   REL-V7R5M0  5770-WDS
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0007)
+     A                                      OVERLAY
+     A  51                                  SFLDSP
+     A  51                                  SFLDSPCTL
+     A N51                                  SFLCLR
+     A                                  2  2'User:'
+     A                                      COLOR(BLU)
+     A            USER          10A  O  2  8
+     A                                  2 59'Date:'
+     A                                      COLOR(BLU)
+     A                                  3  2'Job:'
+     A                                      COLOR(BLU)
+     A            JOB           10A  O  3  8
+     A                                  3 59'Time:'
+     A                                      COLOR(BLU)
+     A                                  4 30'Student Marks'
+     A                                      COLOR(WHT)
+     A                                  2 65DATE
+     A                                      EDTCDE(Y)
+     A                                  3 65TIME
+     A                                  6  2'Student ID:'
+     A                                      COLOR(YLW)
+     A            STUID1         6S 0O  6 17
+     A                                  7  2'Student Name:'
+     A                                      COLOR(YLW)
+     A            NAME1         30A  O  7 17
+     A                                  8  2'Class:'
+     A                                      COLOR(YLW)
+     A            CLS1           2S 0O  8 17
+     A                                 10  2'Subject'
+     A                                      COLOR(YLW)
+     A                                 10 20'Test1'
+     A                                      COLOR(YLW)
+     A                                 10 30'Result'
+     A                                      COLOR(YLW)
+     A                                 10 41'Test2'
+     A                                      COLOR(YLW)
+     A                                 10 51'Result'
+     A                                      COLOR(YLW)
+     A                                 10 62'Test3'
+     A                                      COLOR(YLW)
+     A                                 10 72'Result'
+     A                                      COLOR(YLW)
+     A                                 11  1'__________________________________-
+     A                                      ___________________________________-
+     A                                      ___________'
+     A                                      COLOR(WHT)
+     A          R FOOTER1
+     A*%%TS  SD  20240827  071414  RITESHP     REL-V7R2M0  5770-WDS
+     A                                      OVERLAY
+     A            TOTAL1         3S 0O 21 21
+     A            TOTAL2         3S 0O 21 42
+     A            TOTAL3         3S 0O 21 63
+     A            TRESULT1       4A  O 21 31
+     A            TRESULT2       4A  O 21 52
+     A            TRESULT3       4A  O 21 73
+     A                                 23  5'F1 = Exit   F2 = Previous'
+     A                                      COLOR(BLU)
+     A                                 20 19'-----------------------------------
+     A                                      --------------------------'
+     A                                 22 19'-----------------------------------
+     A                                      --------------------------'

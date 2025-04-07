@@ -1,0 +1,160 @@
+     A*%%TS  SD  20241202  140134  RITESHP     REL-V7R2M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CF01(01 'exit')
+     A                                      CF05(05 'refresh')
+     A                                      CF02(02 'previous')
+     A                                      CF11(11 'subject popup')
+     A          R NEWSTU
+     A*%%TS  SD  20240906  065701  RITESHP     REL-V7R2M0  5770-WDS
+     A                                      OVERLAY
+     A                                  2  2'User:'
+     A                                      COLOR(BLU)
+     A            USER          10A  O  2  8
+     A                                  2 59'Date:'
+     A                                      COLOR(BLU)
+     A                                  3  2'Job:'
+     A                                      COLOR(BLU)
+     A            JOB           10A  O  3  8
+     A                                  3 59'Time:'
+     A                                      COLOR(BLU)
+     A                                  4 30'Enroll New Student'
+     A                                      COLOR(WHT)
+     A                                  6  2'Student ID:'
+     A                                      COLOR(PNK)
+     A            STUID          6S 0O  6 14COLOR(PNK)
+     A                                  8  2'First Name:'
+     A                                      COLOR(YLW)
+     A            FNAME         10A  B  8 15CHECK(VN)
+     A                                  8 28'Middle Name:'
+     A                                      COLOR(YLW)
+     A            MNAME         10A  B  8 42CHECK(VN)
+     A                                      CHECK(AB)
+     A                                  8 56'Last Name:'
+     A                                      COLOR(YLW)
+     A            LNAME         10A  B  8 68CHECK(VN)
+     A                                 10  2'Class Enrolled:'
+     A                                      COLOR(YLW)
+     A            CLSENRL        2S 0B 10 20
+     A                                 10 36'Date Enrolled:'
+     A                                      COLOR(YLW)
+     A                                 12  2'Subject 1:'
+     A                                      COLOR(YLW)
+     A            SUB1          10A  B 12 15
+     A  31                                  DSPATR(RI)
+     A                                 12 36'Subject 2:'
+     A                                      COLOR(YLW)
+     A            SUB2          10A  B 12 49
+     A  32                                  DSPATR(RI)
+     A                                 14  2'Subject 3:'
+     A                                      COLOR(YLW)
+     A            SUB3          10A  B 14 15
+     A  33                                  DSPATR(RI)
+     A                                 14 36'Subject 4:'
+     A                                      COLOR(YLW)
+     A            SUB4          10A  B 14 49
+     A  34                                  DSPATR(RI)
+     A                                 16  2'Subject 5:'
+     A                                      COLOR(YLW)
+     A            SUB5          10A  B 16 15
+     A  35                                  DSPATR(RI)
+     A                                 16 36'Subject 6:'
+     A                                      COLOR(YLW)
+     A            SUB6          10A  B 16 49
+     A  36                                  DSPATR(RI)
+     A                                 18  2'Subject 7:'
+     A                                      COLOR(YLW)
+     A            SUB7          10A  B 18 15
+     A  37                                  DSPATR(RI)
+     A                                 22  2'Function Keys:   F1=Exit   F5=Refr-
+     A                                      esh'
+     A                                      COLOR(BLU)
+     A                                  3 66TIME
+     A            DMSG          50A  O 24 15COLOR(RED)
+     A            DATE3          7S 0O 10 52
+     A                                 24  5'Message:'
+     A                                      COLOR(RED)
+     A                                  2 66DATE
+     A                                      EDTCDE(Y)
+     A          R RANK
+     A*%%TS  SD  20240903  080941  RITESHP     REL-V7R2M0  5770-WDS
+     A                                      OVERLAY
+     A                                  2  2'User:'
+     A                                      COLOR(BLU)
+     A            USER          10A  O  2  8
+     A                                  2 59'Date:'
+     A                                      COLOR(BLU)
+     A                                  3  2'Job:'
+     A                                      COLOR(BLU)
+     A            JOB           10A  O  3  8
+     A                                  3 59'Time:'
+     A                                      COLOR(BLU)
+     A                                  2 65DATE
+     A                                      EDTCDE(Y)
+     A                                  3 65TIME
+     A                                  5 26'Rankwise Student List'
+     A                                      COLOR(WHT)
+     A                                  8 17'Class:'
+     A                                      COLOR(YLW)
+     A            CLASS1         2S 0I  8 28
+     A                                 10 17'Test ID:'
+     A                                      COLOR(YLW)
+     A N30                                  DSPATR(ND)
+     A            TESTID1        5A  I 10 28
+     A N30                                  DSPATR(ND)
+     A                                 12 17'Subject:'
+     A                                      COLOR(YLW)
+     A N31                                  DSPATR(ND)
+     A            SUB           10A  I 12 28
+     A N31                                  DSPATR(ND)
+     A            DMSG          50A  O 22 15COLOR(RED)
+     A                                 22  5'Message:'
+     A                                      COLOR(RED)
+     A          R MAINPGM
+     A*%%TS  SD  20240930  145439  RITESHP     REL-V7R2M0  5770-WDS
+     A                                  4 33'User Menu'
+     A                                      COLOR(WHT)
+     A                                  6 15'1. Enroll New Student'
+     A                                  8 15'2. Marks Maintenance'
+     A                                 10 15'3. Generate Rankwise list of Stude-
+     A                                      nt of class'
+     A                                 12 15'4. Generate list of fail Student i-
+     A                                      n a class'
+     A                                 14 15'5. Generate list of fail Student i-
+     A                                      n given subject'
+     A                                 16 15'6. Exit'
+     A                                 19 15'Choice:'
+     A                                      COLOR(WHT)
+     A            OPT            1S 0I 19 25
+     A                                  2 59'Date:'
+     A                                      COLOR(BLU)
+     A                                  2  4'Time:'
+     A                                      COLOR(BLU)
+     A                                  2 65DATE
+     A                                      EDTCDE(Y)
+     A                                  2 10TIME
+     A            VALUE         20   O 22 15COLOR(RED)
+     A          R POPUPSFL                  SFL
+     A*%%TS  SD  20240905  065250  RITESHP     REL-V7R2M0  5770-WDS
+     A            SUB_NAM   R        O  5  4REFFLD(SUBJECT/SUBNAME RITESH1-
+     A                                      /SBMSTP)
+     A          R POPUPCTL                  SFLCTL(POPUPSFL)
+     A*%%TS  SD  20241202  140134  RITESHP     REL-V7R2M0  5770-WDS
+     A                                      CA03(03)
+     A                                      OVERLAY
+     A  40                                  SFLDSP
+     A  40                                  SFLDSPCTL
+     A N40                                  SFLCLR
+     A  40                                  SFLEND
+     A                                      SFLSIZ(0100)
+     A                                      SFLPAG(0010)
+     A                                      WINDOW(WINDOW)
+     A                                      WDWBORDER((*COLOR BLU))
+     A                                  1 13'SUBJECTS'
+     A                                  3  3'SUBJECT NAME'
+     A          R WINDOW
+     A*%%TS  SD  20240906  075923  RITESHP     REL-V7R2M0  5770-WDS
+     A*                                      OVERLAY
+     A                                      WINDOW(3 15 18 30)
+     A                                 17  6'F3 = EXIT'
+     A                                      COLOR(BLU)
