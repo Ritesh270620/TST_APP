@@ -1,0 +1,6 @@
+ /* %attr DFTACTGRP(*NO) ACTGRP(*NEW)   */
+             PGM
+
+             SNDUSRMSG  MSG('Hello World')
+
+             ENDPGM
